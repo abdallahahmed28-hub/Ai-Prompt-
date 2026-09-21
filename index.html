@@ -1,42 +1,2642 @@
-<!doctype html><html lang="ar" dir="rtl"><head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#0b0c0e"><title>PromptLab | البركة ديجيتال</title>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0b0c0e">
+
+<title>PromptLab | البركة ديجيتال</title>
+
 <style>
-:root{--v:#0b0c0e;--g:#131416;--c:#1f1f21;--l:#33353a;--m:#858687;--w:#fff;--b:#3b82f6;--bb:#60a5fa;--gold:#e9b949;--green:#4ade80}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(900px 500px at 80% -10%,#3b82f622,transparent 60%),var(--v);color:var(--w);font-family:Inter,Tajawal,Arial,sans-serif}button,input,textarea,select{font:inherit}button{cursor:pointer}.wrap{width:min(1160px,calc(100% - 28px));margin:auto}.nav{position:sticky;top:0;z-index:20;background:#0b0c0eea;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff12}.navin{height:68px;display:flex;align-items:center;gap:14px}.brand{display:flex;align-items:center;gap:9px;margin-left:auto}.brand img{width:44px;height:44px;object-fit:cover;border-radius:12px;border:1px solid #e9b94966}.brand b{display:block;font-size:14px}.brand small{color:var(--m);font-size:9px}.links{display:flex;gap:3px}.links a{color:#aaa;text-decoration:none;font-size:11px;padding:9px}.btn,.ghost,.mini{border-radius:9px;padding:10px 13px;border:0}.btn{background:#f2f2f2;color:#111;font-weight:700}.ghost,.mini{background:var(--c);border:1px solid #36383d;color:#ddd}.mini{padding:7px 9px;font-size:9px}.hero{padding:80px 0 48px}.heroGrid{display:grid;grid-template-columns:1.05fr .95fr;gap:34px;align-items:center}.badge{display:inline-block;border:1px solid #e9b94955;background:#e9b9490d;color:#f3d98b;border-radius:99px;padding:7px 10px;font-size:10px}h1{font-size:clamp(42px,6vw,72px);font-weight:400;line-height:1.03;letter-spacing:-.04em;margin:18px 0}h1 span{color:var(--bb)}.lead{color:#a2a3a7;line-height:1.9;font-size:15px}.heroActions{display:flex;gap:8px;flex-wrap:wrap}.poster{background:linear-gradient(145deg,#e9b94914,#131416);border:1px solid #e9b94944;border-radius:20px;padding:10px}.poster img{width:100%;display:block;border-radius:13px;max-height:510px;object-fit:cover}.poster p{margin:10px 4px 2px;color:#e9c96d;font-size:10px}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-top:24px}.stat{background:var(--g);border:1px solid var(--l);border-radius:13px;padding:13px}.stat b{display:block;font-size:20px}.stat span{font-size:9px;color:var(--m)}section{padding:66px 0;scroll-margin-top:70px}.head{margin-bottom:20px}.kick{color:var(--bb);font-size:10px}.head h2{font-size:clamp(28px,4vw,44px);font-weight:400;margin:8px 0}.head p{color:#999;font-size:12px;line-height:1.8}.tools{display:grid;grid-template-columns:.95fr 1.05fr;gap:12px}.panel{background:var(--g);border:1px solid var(--l);border-radius:16px;padding:16px}.grid2{display:grid;grid-template-columns:1fr 1fr;gap:9px}.field{margin-bottom:10px}.field label{display:block;color:#ccc;font-size:9px;margin-bottom:6px}input,textarea,select{width:100%;background:var(--c);border:1px solid #383a40;border-radius:9px;color:#fff;padding:11px;outline:none}textarea{min-height:90px;resize:vertical;line-height:1.7}input:focus,textarea:focus,select:focus{border-color:var(--b);box-shadow:0 0 0 3px #3b82f61c}.actions{display:flex;gap:7px;margin-top:8px}.actions .btn{flex:1}.output{background:#0d0e10;border:1px solid var(--l);border-radius:12px;padding:13px;min-height:500px}.outHead{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--l);padding-bottom:10px;color:var(--m);font-size:9px}pre{font:11px/1.95 inherit;white-space:pre-wrap;color:#d3d3d5}.chips{display:flex;gap:6px;overflow:auto;margin-bottom:11px;padding-bottom:4px}.chip{white-space:nowrap;background:transparent;border:1px solid var(--l);color:#aaa;border-radius:99px;padding:7px 9px;font-size:9px}.chip:hover{border-color:var(--b);color:#fff}.controls{display:flex;gap:8px;margin-bottom:12px}.cards,.lessons{display:grid;grid-template-columns:repeat(3,1fr);gap:9px}.card,.lesson{background:var(--g);border:1px solid var(--l);border-radius:14px;padding:14px}.tag{color:var(--bb);background:#3b82f612;border-radius:99px;padding:5px 7px;font-size:8px}.card h3,.lesson h3{font-size:13px;margin:12px 0 7px}.card p,.lesson p{color:var(--m);font-size:9px;line-height:1.7}.snippet{background:#0d0e10;border:1px solid var(--l);border-radius:8px;padding:9px;color:#bbb;font-size:9px;line-height:1.7;height:90px;overflow:auto}.cardBtns{display:flex;gap:5px;margin-top:9px}.lesson.done{border-color:#4ade8055}.tableWrap{overflow:auto;border:1px solid var(--l);border-radius:14px}table{width:100%;border-collapse:collapse;min-width:720px;background:var(--g)}th,td{padding:11px;border-bottom:1px solid var(--l);text-align:right;font-size:9px}th{color:#aaa;background:#0e0f11}td:first-child{color:var(--bb);font-weight:700;direction:ltr;text-align:left}.saved{display:grid;gap:7px}.savedItem{background:var(--g);border:1px solid var(--l);border-radius:12px;padding:12px}.savedItem p{white-space:pre-wrap;color:#aaa;font-size:9px;max-height:110px;overflow:auto}.identity{display:grid;grid-template-columns:220px 1fr;gap:18px;align-items:center;margin-top:25px;padding:14px;border:1px solid #e9b94944;border-radius:16px;background:linear-gradient(135deg,#e9b94910,#3b82f60b)}.identity img{width:100%;border-radius:12px}.identity h3{color:var(--gold);font-size:21px;margin:0}.identity p{color:#aaa;font-size:10px;line-height:1.8}footer{border-top:1px solid var(--l);padding:28px 0}.foot{display:flex;justify-content:space-between;align-items:center}.credit{font-size:10px;color:var(--gold)}.toast{position:fixed;bottom:18px;left:18px;background:#fff;color:#111;padding:9px 11px;border-radius:8px;font-size:9px;font-weight:bold;opacity:0;transition:.2s;z-index:50}.toast.on{opacity:1}
-@media(max-width:900px){.links{display:none}.heroGrid,.tools{grid-template-columns:1fr}.cards,.lessons{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.hero{padding-top:48px}.stats{grid-template-columns:repeat(2,1fr)}.grid2,.cards,.lessons{grid-template-columns:1fr}.controls{flex-direction:column}.identity{grid-template-columns:1fr}.foot{align-items:flex-start;gap:15px;flex-direction:column}.poster img{max-height:430px}}
-</style></head><body>
-<header class="nav"><div class="wrap navin"><div class="brand"><img src="assets/logo.jpg"><span><b>PromptLab</b><small>البركة ديجيتال</small></span></div><nav class="links"><a href="#generator">المولد</a><a href="#optimizer">المحسن</a><a href="#library">المكتبة</a><a href="#learn">التعلم</a><a href="#shortcuts">الاختصارات</a><a href="#saved">المحفوظات</a></nav><button class="btn" onclick="go('generator')">أنشئ برومبت</button></div></header>
-<main><div class="hero"><div class="wrap"><div class="heroGrid"><div><span class="badge">● مجاني بالكامل — دون اشتراك</span><h1>هندسة البرومبتات<br><span>من الألف إلى الياء.</span></h1><p class="lead">تعلّم، أنشئ، حسّن واحفظ البرومبتات باحتراف. قوالب متخصصة، موسوعة اختصارات، ومسار تعليمي كامل — يعمل مباشرة على الهاتف والحاسوب.</p><div class="heroActions"><button class="btn" onclick="go('generator')">ابدأ مجانًا</button><button class="ghost" onclick="go('learn')">ابدأ التعلّم</button></div></div><div class="poster"><img src="assets/albaraka-brand.jpeg"><p>البركة للتقنية والتطوير • البرمجة والإشراف: عبد الله أحمد</p></div></div><div class="stats"><div class="stat"><b>12</b><span>مرحلة تعليمية</span></div><div class="stat"><b>12+</b><span>قالب متخصص</span></div><div class="stat"><b>50+</b><span>اختصارًا ومفهومًا</span></div><div class="stat"><b>100%</b><span>مجاني</span></div></div></div></div>
+:root{
+  --void:#0b0c0e;
+  --graphite:#131416;
+  --charcoal:#1f1f21;
+  --border:#33353a;
+  --muted:#858687;
+  --text:#ffffff;
+  --blue:#3b82f6;
+  --blue2:#60a5fa;
+  --gold:#e9b949;
+  --green:#4ade80;
+  --red:#f87171;
+}
 
-<section id="generator"><div class="wrap"><div class="head"><span class="kick">مولّد البرومبتات</span><h2>حوّل فكرتك إلى برومبت احترافي</h2><p>املأ التفاصيل أو استخدم أحد القوالب الجاهزة.</p></div><div class="chips" id="chips"></div><div class="tools"><div class="panel">
-<div class="grid2"><div class="field"><label>المجال</label><select id="cat"></select></div><div class="field"><label>الدور</label><input id="role" placeholder="خبير تسويق، مدرس، مطور..."></div></div>
-<div class="field"><label>المهمة</label><textarea id="task" placeholder="ماذا تريد من النموذج؟"></textarea></div><div class="field"><label>السياق</label><textarea id="context" placeholder="المشروع، البيانات، الخلفية..."></textarea></div>
-<div class="grid2"><div class="field"><label>الجمهور</label><input id="audience" placeholder="لمن ستكون النتيجة؟"></div><div class="field"><label>النبرة</label><select id="tone"><option>مهنية وواضحة</option><option>ودية</option><option>تعليمية</option><option>إبداعية</option><option>مختصرة ومباشرة</option></select></div></div>
-<div class="field"><label>القيود والمعايير</label><textarea id="constraints" placeholder="الطول، اللغة، ما يجب تجنبه..."></textarea></div>
-<div class="grid2"><div class="field"><label>صيغة الناتج</label><select id="format"><option>عناوين ونقاط</option><option>خطوات مرقمة</option><option>جدول</option><option>قائمة تحقق</option><option>JSON</option></select></div><div class="field"><label>التفصيل</label><select id="depth"><option>متوازن</option><option>مختصر</option><option>تفصيلي</option><option>عميق</option></select></div></div>
-<div class="actions"><button class="btn" onclick="generate()">✦ إنشاء البرومبت</button><button class="ghost" onclick="clearGen()">مسح</button></div></div>
-<div class="panel"><div class="output"><div class="outHead"><span>البرومبت النهائي</span><div><button class="mini" onclick="copy('out')">نسخ</button> <button class="mini" onclick="save('out','برومبت مولّد')">حفظ</button></div></div><pre id="out">املأ التفاصيل ثم اضغط «إنشاء البرومبت».</pre></div></div></div></div></section>
+*{
+  box-sizing:border-box;
+}
 
-<section id="optimizer"><div class="wrap"><div class="head"><span class="kick">محسّن البرومبت</span><h2>اجعل برومبتك أوضح وأقوى</h2><p>تحسين هيكلي يعمل محليًا دون API.</p></div><div class="tools"><div class="panel"><div class="field"><label>البرومبت الحالي</label><textarea id="raw" style="min-height:240px" placeholder="ألصق البرومبت هنا..."></textarea></div><div class="grid2"><div class="field"><label>الأسلوب</label><select id="mode"><option>دقيق ومتوازن</option><option>بحثي موثق</option><option>إبداعي</option><option>تنفيذي مباشر</option></select></div><div class="field"><label>المخرجات</label><select id="oformat"><option>عناوين ونقاط</option><option>خطوات</option><option>جدول</option><option>JSON</option></select></div></div><button class="btn" onclick="optimize()">تحسين الآن</button></div><div class="panel"><div class="output"><div class="outHead"><span>النسخة المحسنة</span><div><button class="mini" onclick="copy('optout')">نسخ</button> <button class="mini" onclick="save('optout','برومبت محسّن')">حفظ</button></div></div><pre id="optout">ألصق البرومبت ثم اضغط «تحسين الآن».</pre></div></div></div></div></section>
+html{
+  scroll-behavior:smooth;
+}
 
-<section id="library"><div class="wrap"><div class="head"><span class="kick">مكتبة البرومبتات</span><h2>قوالب جاهزة قابلة للتخصيص</h2></div><div class="controls"><input id="search" placeholder="ابحث عن برومبت..."><select id="filter"></select></div><div class="cards" id="cards"></div></div></section>
-<section id="learn"><div class="wrap"><div class="head"><span class="kick">المسار التعليمي</span><h2>من الصفر إلى الاحتراف</h2><p id="progress">0% مكتمل</p></div><div class="lessons" id="lessons"></div></div></section>
-<section id="shortcuts"><div class="wrap"><div class="head"><span class="kick">الاختصارات</span><h2>موسوعة سريعة لهندسة البرومبتات</h2></div><div class="controls"><input id="ssearch" placeholder="ابحث: ELI5, AIDA, JSON..."></div><div class="tableWrap"><table><thead><tr><th>الاختصار</th><th>المعنى</th><th>الاستخدام</th></tr></thead><tbody id="stable"></tbody></table></div></div></section>
-<section id="saved"><div class="wrap"><div class="head"><span class="kick">المحفوظات</span><h2>برومبتاتك المحفوظة</h2><button class="ghost" onclick="clearSaved()">حذف الكل</button></div><div class="saved" id="savedList"></div><div class="identity"><img src="assets/albaraka-brand.jpeg"><div><h3>البركة ديجيتال</h3><p>شريكك في التحول الرقمي — حلول مبتكرة، نتائج حقيقية.<br>البركة للتقنية والتطوير.</p><p style="color:#e9b949">البرمجة والإشراف: عبد الله أحمد</p></div></div></div></section></main>
-<footer><div class="wrap foot"><div class="brand"><img src="assets/logo.jpg"><span><b>PromptLab</b><small>من البركة ديجيتال</small></span></div><div class="credit">البرمجة والإشراف: عبد الله أحمد</div></div></footer><div class="toast" id="toast"></div>
+body{
+  margin:0;
+  background:
+    radial-gradient(800px 500px at 90% -10%,rgba(59,130,246,.16),transparent 60%),
+    var(--void);
+  color:var(--text);
+  font-family:Arial,Tahoma,sans-serif;
+  line-height:1.7;
+}
+
+button,input,textarea,select{
+  font-family:inherit;
+}
+
+button{
+  cursor:pointer;
+}
+
+.container{
+  width:min(1150px,calc(100% - 28px));
+  margin:auto;
+}
+
+/* NAV */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(11,12,14,.92);
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.nav{
+  height:68px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  margin-left:auto;
+}
+
+.brand img{
+  width:45px;
+  height:45px;
+  object-fit:cover;
+  border-radius:12px;
+  border:1px solid rgba(233,185,73,.5);
+}
+
+.brand strong{
+  display:block;
+  font-size:14px;
+}
+
+.brand small{
+  color:var(--gold);
+  font-size:9px;
+}
+
+nav{
+  display:flex;
+  gap:4px;
+}
+
+nav a{
+  text-decoration:none;
+  color:#aaa;
+  font-size:11px;
+  padding:8px;
+}
+
+nav a:hover{
+  color:white;
+}
+
+.btn{
+  border:0;
+  border-radius:9px;
+  background:#f2f2f2;
+  color:#111;
+  font-weight:bold;
+  padding:11px 15px;
+}
+
+.btn-blue{
+  background:var(--blue);
+  color:white;
+}
+
+.ghost{
+  border:1px solid var(--border);
+  background:var(--charcoal);
+  color:#ddd;
+  border-radius:9px;
+  padding:10px 13px;
+}
+
+/* HERO */
+
+.hero{
+  padding:70px 0 45px;
+}
+
+.hero-grid{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  gap:35px;
+  align-items:center;
+}
+
+.badge{
+  display:inline-block;
+  padding:6px 11px;
+  border-radius:50px;
+  color:#f2d780;
+  background:rgba(233,185,73,.08);
+  border:1px solid rgba(233,185,73,.35);
+  font-size:10px;
+}
+
+h1{
+  font-size:clamp(40px,6vw,70px);
+  font-weight:400;
+  line-height:1.08;
+  margin:18px 0;
+}
+
+h1 span{
+  color:var(--blue2);
+}
+
+.lead{
+  color:#aaa;
+  font-size:15px;
+  line-height:2;
+}
+
+.hero-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:20px;
+}
+
+.brand-card{
+  padding:9px;
+  border-radius:20px;
+  border:1px solid rgba(233,185,73,.35);
+  background:linear-gradient(145deg,rgba(233,185,73,.08),var(--graphite));
+}
+
+.brand-card img{
+  display:block;
+  width:100%;
+  max-height:520px;
+  object-fit:cover;
+  border-radius:14px;
+}
+
+.brand-card p{
+  font-size:10px;
+  color:var(--gold);
+  margin:10px 5px 3px;
+}
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:8px;
+  margin-top:28px;
+}
+
+.stat{
+  padding:15px;
+  border-radius:13px;
+  background:var(--graphite);
+  border:1px solid var(--border);
+}
+
+.stat strong{
+  display:block;
+  font-size:21px;
+}
+
+.stat span{
+  font-size:9px;
+  color:var(--muted);
+}
+
+/* GENERAL */
+
+section{
+  padding:65px 0;
+  scroll-margin-top:70px;
+}
+
+.section-title{
+  margin-bottom:22px;
+}
+
+.section-title small{
+  color:var(--blue2);
+}
+
+.section-title h2{
+  margin:7px 0;
+  font-size:clamp(28px,4vw,44px);
+  font-weight:400;
+}
+
+.section-title p{
+  color:#999;
+  font-size:12px;
+}
+
+.panel{
+  background:var(--graphite);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:16px;
+}
+
+.two-columns{
+  display:grid;
+  grid-template-columns:.95fr 1.05fr;
+  gap:12px;
+}
+
+.grid2{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:9px;
+}
+
+.field{
+  margin-bottom:11px;
+}
+
+.field label{
+  display:block;
+  margin-bottom:6px;
+  color:#ccc;
+  font-size:10px;
+}
+
+input,
+textarea,
+select{
+  width:100%;
+  border:1px solid #383a40;
+  background:var(--charcoal);
+  color:white;
+  border-radius:9px;
+  padding:11px;
+  outline:none;
+}
+
+textarea{
+  min-height:95px;
+  resize:vertical;
+}
+
+input:focus,
+textarea:focus,
+select:focus{
+  border-color:var(--blue);
+  box-shadow:0 0 0 3px rgba(59,130,246,.12);
+}
+
+.actions{
+  display:flex;
+  gap:7px;
+  margin-top:9px;
+}
+
+.actions .btn{
+  flex:1;
+}
+
+/* OUTPUT */
+
+.output{
+  min-height:500px;
+  padding:14px;
+  background:#0d0e10;
+  border:1px solid var(--border);
+  border-radius:12px;
+}
+
+.output-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding-bottom:10px;
+  border-bottom:1px solid var(--border);
+  color:#999;
+  font-size:10px;
+}
+
+.small-btn{
+  padding:7px 9px;
+  color:#ddd;
+  background:var(--charcoal);
+  border:1px solid #393b40;
+  border-radius:7px;
+  font-size:9px;
+}
+
+pre{
+  margin-top:15px;
+  white-space:pre-wrap;
+  word-wrap:break-word;
+  font-family:inherit;
+  font-size:12px;
+  line-height:2;
+  color:#d5d5d7;
+}
+
+/* CHIPS */
+
+.chips{
+  display:flex;
+  overflow-x:auto;
+  gap:6px;
+  margin-bottom:12px;
+  padding-bottom:5px;
+}
+
+.chip{
+  white-space:nowrap;
+  border-radius:30px;
+  border:1px solid var(--border);
+  background:transparent;
+  color:#aaa;
+  padding:7px 10px;
+  font-size:9px;
+}
+
+.chip:hover{
+  border-color:var(--blue);
+  color:white;
+}
+
+/* LIBRARY */
+
+.controls{
+  display:flex;
+  gap:8px;
+  margin-bottom:13px;
+}
+
+.cards{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+}
+
+.card{
+  background:var(--graphite);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:14px;
+}
+
+.tag{
+  display:inline-block;
+  padding:4px 8px;
+  border-radius:30px;
+  color:var(--blue2);
+  background:rgba(59,130,246,.08);
+  font-size:8px;
+}
+
+.card h3{
+  font-size:14px;
+  margin:11px 0 6px;
+}
+
+.card p{
+  color:#888;
+  font-size:9px;
+}
+
+.snippet{
+  height:100px;
+  overflow:auto;
+  padding:9px;
+  border-radius:8px;
+  border:1px solid var(--border);
+  background:#0d0e10;
+  color:#bbb;
+  font-size:9px;
+}
+
+.card-buttons{
+  display:flex;
+  gap:6px;
+  margin-top:9px;
+}
+
+/* LESSONS */
+
+.lessons{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:9px;
+}
+
+.lesson{
+  padding:15px;
+  background:var(--graphite);
+  border:1px solid var(--border);
+  border-radius:14px;
+}
+
+.lesson.completed{
+  border-color:rgba(74,222,128,.5);
+}
+
+.lesson h3{
+  font-size:14px;
+  margin:10px 0 6px;
+}
+
+.lesson p{
+  color:#888;
+  font-size:10px;
+}
+
+/* TABLE */
+
+.table-wrapper{
+  overflow:auto;
+  border:1px solid var(--border);
+  border-radius:14px;
+}
+
+table{
+  width:100%;
+  min-width:700px;
+  border-collapse:collapse;
+  background:var(--graphite);
+}
+
+th,td{
+  padding:11px;
+  text-align:right;
+  font-size:10px;
+  border-bottom:1px solid var(--border);
+}
+
+th{
+  background:#0e0f11;
+  color:#aaa;
+}
+
+td:first-child{
+  color:var(--blue2);
+  font-weight:bold;
+}
+
+/* SAVED */
+
+.saved-list{
+  display:grid;
+  gap:8px;
+}
+
+.saved-item{
+  padding:13px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:var(--graphite);
+}
+
+.saved-item p{
+  white-space:pre-wrap;
+  color:#aaa;
+  font-size:10px;
+  max-height:130px;
+  overflow:auto;
+}
+
+/* BRAND SIGNATURE */
+
+.signature{
+  display:grid;
+  grid-template-columns:220px 1fr;
+  align-items:center;
+  gap:20px;
+  margin-top:28px;
+  padding:15px;
+  border-radius:17px;
+  border:1px solid rgba(233,185,73,.35);
+  background:
+    linear-gradient(135deg,rgba(233,185,73,.08),rgba(59,130,246,.04));
+}
+
+.signature img{
+  width:100%;
+  border-radius:13px;
+}
+
+.signature h3{
+  margin:0;
+  color:var(--gold);
+  font-size:22px;
+}
+
+.signature p{
+  color:#aaa;
+  font-size:11px;
+}
+
+/* FOOTER */
+
+footer{
+  padding:28px 0;
+  border-top:1px solid var(--border);
+}
+
+.footer{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.credit{
+  color:var(--gold);
+  font-size:10px;
+}
+
+/* TOAST */
+
+.toast{
+  position:fixed;
+  left:18px;
+  bottom:18px;
+  z-index:200;
+  opacity:0;
+  transform:translateY(10px);
+  padding:9px 12px;
+  border-radius:8px;
+  background:white;
+  color:#111;
+  font-size:10px;
+  font-weight:bold;
+  transition:.2s;
+  pointer-events:none;
+}
+
+.toast.show{
+  opacity:1;
+  transform:none;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+  nav{
+    display:none;
+  }
+
+  .hero-grid,
+  .two-columns{
+    grid-template-columns:1fr;
+  }
+
+  .cards,
+  .lessons{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:600px){
+  .container{
+    width:min(100% - 20px,1150px);
+  }
+
+  .nav{
+    height:62px;
+  }
+
+  .nav>.btn{
+    font-size:10px;
+    padding:9px 10px;
+  }
+
+  .hero{
+    padding-top:45px;
+  }
+
+  h1{
+    font-size:42px;
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .grid2,
+  .cards,
+  .lessons{
+    grid-template-columns:1fr;
+  }
+
+  .controls{
+    flex-direction:column;
+  }
+
+  .signature{
+    grid-template-columns:1fr;
+  }
+
+  .footer{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:15px;
+  }
+
+  .brand-card img{
+    max-height:430px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="container nav">
+
+<div class="brand">
+<img src="logo.jpg" alt="شعار البركة ديجيتال">
+<div>
+<strong>PromptLab</strong>
+<small>البركة ديجيتال</small>
+</div>
+</div>
+
+<nav>
+<a href="#generator">المولد</a>
+<a href="#optimizer">المحسّن</a>
+<a href="#library">البرومبتات</a>
+<a href="#learn">التعلم</a>
+<a href="#shortcuts">الاختصارات</a>
+<a href="#saved">المحفوظات</a>
+</nav>
+
+<button class="btn" onclick="goTo('generator')">
+أنشئ برومبت
+</button>
+
+</div>
+</header>
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero">
+<div class="container">
+
+<div class="hero-grid">
+
+<div>
+
+<span class="badge">
+● مجاني بالكامل — دون تسجيل أو اشتراك
+</span>
+
+<h1>
+تعلّم هندسة البرومبتات
+<br>
+<span>من الألف إلى الياء.</span>
+</h1>
+
+<p class="lead">
+منصة عربية متكاملة لتعلّم كتابة البرومبتات، إنشائها،
+تحسينها وحفظها. قوالب متخصصة وموسوعة اختصارات
+ومسار تعليمي عملي.
+</p>
+
+<div class="hero-buttons">
+
+<button class="btn btn-blue" onclick="goTo('generator')">
+ابدأ إنشاء البرومبت
+</button>
+
+<button class="ghost" onclick="goTo('learn')">
+ابدأ التعلم
+</button>
+
+<button class="ghost" onclick="goTo('library')">
+مكتبة البرومبتات
+</button>
+
+</div>
+
+</div>
+
+<div class="brand-card">
+
+<img
+src="albaraka-brand.jpeg"
+alt="البركة ديجيتال"
+onerror="this.style.display='none'"
+>
+
+<p>
+البركة للتقنية والتطوير • البرمجة والإشراف: عبد الله أحمد
+</p>
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<div class="stat">
+<strong>12</strong>
+<span>مرحلة تعليمية</span>
+</div>
+
+<div class="stat">
+<strong>15+</strong>
+<span>قالب برومبت</span>
+</div>
+
+<div class="stat">
+<strong>50+</strong>
+<span>اختصارًا ومفهومًا</span>
+</div>
+
+<div class="stat">
+<strong>100%</strong>
+<span>مجاني</span>
+</div>
+
+</div>
+
+</div>
+</section>
+
+<!-- GENERATOR -->
+
+<section id="generator">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>مولد البرومبتات الاحترافي</small>
+
+<h2>
+من الفكرة إلى برومبت متكامل
+</h2>
+
+<p>
+أدخل التفاصيل الأساسية وسنبني لك برومبت منظمًا قابلًا للنسخ والحفظ.
+</p>
+
+</div>
+
+<div class="chips" id="quickTemplates"></div>
+
+<div class="two-columns">
+
+<div class="panel">
+
+<div class="grid2">
+
+<div class="field">
+<label>المجال</label>
+<select id="category"></select>
+</div>
+
+<div class="field">
+<label>الدور المطلوب</label>
+<input id="role" placeholder="مثال: خبير تسويق رقمي">
+</div>
+
+</div>
+
+<div class="field">
+
+<label>ماذا تريد؟</label>
+
+<textarea
+id="task"
+placeholder="مثال: أريد خطة تسويق لمتجر إلكتروني جديد..."
+></textarea>
+
+</div>
+
+<div class="field">
+
+<label>السياق والتفاصيل</label>
+
+<textarea
+id="context"
+placeholder="أضف المعلومات التي يحتاجها النموذج لفهم المهمة..."
+></textarea>
+
+</div>
+
+<div class="grid2">
+
+<div class="field">
+
+<label>الجمهور المستهدف</label>
+
+<input
+id="audience"
+placeholder="مثال: أصحاب المشاريع الصغيرة"
+>
+
+</div>
+
+<div class="field">
+
+<label>النبرة</label>
+
+<select id="tone">
+
+<option>مهنية وواضحة</option>
+<option>ودية</option>
+<option>تعليمية</option>
+<option>إبداعية</option>
+<option>تسويقية مقنعة</option>
+<option>مختصرة ومباشرة</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="field">
+
+<label>القيود والشروط</label>
+
+<textarea
+id="constraints"
+placeholder="مثال: لا تتجاوز 500 كلمة، استخدم العربية الفصحى..."
+></textarea>
+
+</div>
+
+<div class="grid2">
+
+<div class="field">
+
+<label>صيغة المخرجات</label>
+
+<select id="format">
+
+<option>عناوين ونقاط</option>
+<option>خطوات مرقمة</option>
+<option>جدول</option>
+<option>قائمة تحقق</option>
+<option>تقرير منظم</option>
+<option>JSON</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label>مستوى التفصيل</label>
+
+<select id="depth">
+
+<option>متوازن</option>
+<option>مختصر</option>
+<option>تفصيلي</option>
+<option>عميق وشامل</option>
+
+</select>
+
+</div>
+
+</div>
+
+<div class="actions">
+
+<button
+class="btn btn-blue"
+onclick="generatePrompt()"
+>
+✦ إنشاء البرومبت
+</button>
+
+<button
+class="ghost"
+onclick="clearGenerator()"
+>
+مسح
+</button>
+
+</div>
+
+</div>
+
+<div class="panel">
+
+<div class="output">
+
+<div class="output-head">
+
+<span>
+البرومبت النهائي
+</span>
+
+<div>
+
+<button
+class="small-btn"
+onclick="copyElement('generatedPrompt')"
+>
+نسخ
+</button>
+
+<button
+class="small-btn"
+onclick="saveElement('generatedPrompt','برومبت مولّد')"
+>
+حفظ
+</button>
+
+</div>
+
+</div>
+
+<pre id="generatedPrompt">املأ تفاصيل المهمة ثم اضغط «إنشاء البرومبت».</pre>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- OPTIMIZER -->
+
+<section id="optimizer">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>محسّن البرومبتات</small>
+
+<h2>
+لديك برومبت؟ حسّنه.
+</h2>
+
+<p>
+حوّل التعليمات البسيطة إلى برومبت منظم وأكثر وضوحًا.
+</p>
+
+</div>
+
+<div class="two-columns">
+
+<div class="panel">
+
+<div class="field">
+
+<label>البرومبت الحالي</label>
+
+<textarea
+id="rawPrompt"
+style="min-height:260px"
+placeholder="ألصق البرومبت الذي تريد تحسينه..."
+></textarea>
+
+</div>
+
+<div class="grid2">
+
+<div class="field">
+
+<label>أسلوب التحسين</label>
+
+<select id="optimizationMode">
+
+<option>دقيق ومتوازن</option>
+<option>بحثي وموثق</option>
+<option>إبداعي</option>
+<option>تنفيذي مباشر</option>
+<option>تعليمي</option>
+
+</select>
+
+</div>
+
+<div class="field">
+
+<label>شكل الإجابة</label>
+
+<select id="optimizationFormat">
+
+<option>عناوين ونقاط</option>
+<option>خطوات مرقمة</option>
+<option>جدول</option>
+<option>قائمة تحقق</option>
+<option>JSON</option>
+
+</select>
+
+</div>
+
+</div>
+
+<button
+class="btn btn-blue"
+onclick="optimizePrompt()"
+>
+تحسين البرومبت
+</button>
+
+</div>
+
+<div class="panel">
+
+<div class="output">
+
+<div class="output-head">
+
+<span>
+النسخة المحسنة
+</span>
+
+<div>
+
+<button
+class="small-btn"
+onclick="copyElement('optimizedPrompt')"
+>
+نسخ
+</button>
+
+<button
+class="small-btn"
+onclick="saveElement('optimizedPrompt','برومبت محسّن')"
+>
+حفظ
+</button>
+
+</div>
+
+</div>
+
+<pre id="optimizedPrompt">ألصق البرومبت في الخانة المقابلة ثم اضغط «تحسين البرومبت».</pre>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- LIBRARY -->
+
+<section id="library">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>مكتبة البرومبتات</small>
+
+<h2>
+برومبتات جاهزة للاستخدام
+</h2>
+
+<p>
+اختر القالب المناسب وعدّله حسب مشروعك.
+</p>
+
+</div>
+
+<div class="controls">
+
+<input
+id="librarySearch"
+placeholder="ابحث في مكتبة البرومبتات..."
+>
+
+<select id="libraryFilter"></select>
+
+</div>
+
+<div
+class="cards"
+id="promptLibrary"
+></div>
+
+</div>
+
+</section>
+
+<!-- LEARNING -->
+
+<section id="learn">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>أكاديمية البرومبت</small>
+
+<h2>
+من المبتدئ إلى الاحتراف
+</h2>
+
+<p id="learningProgress">
+0% مكتمل
+</p>
+
+</div>
+
+<div
+class="lessons"
+id="lessonList"
+></div>
+
+</div>
+
+</section>
+
+<!-- SHORTCUTS -->
+
+<section id="shortcuts">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>موسوعة الاختصارات</small>
+
+<h2>
+أهم اختصارات الذكاء الاصطناعي والبرومبتات
+</h2>
+
+<p>
+ابحث عن الاختصار واعرف معناه واستخدامه.
+</p>
+
+</div>
+
+<div class="controls">
+
+<input
+id="shortcutSearch"
+placeholder="مثال: ELI5 أو AIDA أو JSON أو API..."
+>
+
+</div>
+
+<div class="table-wrapper">
+
+<table>
+
+<thead>
+
+<tr>
+<th>الاختصار</th>
+<th>المعنى</th>
+<th>الاستخدام</th>
+</tr>
+
+</thead>
+
+<tbody id="shortcutTable"></tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SAVED -->
+
+<section id="saved">
+
+<div class="container">
+
+<div class="section-title">
+
+<small>المحفوظات</small>
+
+<h2>
+برومبتاتك المحفوظة
+</h2>
+
+<button
+class="ghost"
+onclick="clearAllSaved()"
+>
+حذف جميع المحفوظات
+</button>
+
+</div>
+
+<div
+class="saved-list"
+id="savedList"
+></div>
+
+<div class="signature">
+
+<img
+src="albaraka-brand.jpeg"
+alt="البركة ديجيتال"
+onerror="this.style.display='none'"
+>
+
+<div>
+
+<h3>
+البركة ديجيتال
+</h3>
+
+<p>
+شريكك في التحول الرقمي.
+<br>
+حلول مبتكرة.. نتائج حقيقية.
+<br>
+البركة للتقنية والتطوير.
+</p>
+
+<p style="color:#e9b949">
+البرمجة والإشراف: عبد الله أحمد
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="container footer">
+
+<div class="brand">
+
+<img
+src="logo.jpg"
+alt="شعار البركة"
+>
+
+<div>
+
+<strong>
+PromptLab
+</strong>
+
+<small>
+AlBaraka Digital
+</small>
+
+</div>
+
+</div>
+
+<div class="credit">
+البرمجة والإشراف: عبد الله أحمد
+</div>
+
+</div>
+
+</footer>
+
+<div
+class="toast"
+id="toast"
+></div>
+
 <script>
-const T=[["التسويق", "خطة تسويق", "تصرّف كخبير تسويق رقمي. أنشئ خطة عملية لـ [المشروع] تستهدف [الجمهور]، مع القنوات، الأفكار، CTA ومؤشرات القياس."], ["الكتابة", "كاتب محتوى", "اكتب محتوى احترافيًا عن [الموضوع] لجمهور [الجمهور] بنبرة [النبرة]، مع خطاف قوي وبنية واضحة وخاتمة عملية."], ["التعليم", "مدرس شخصي", "اشرح [الموضوع] لمتعلم بمستوى [المستوى]، ثم أعط مثالًا وتمرينًا وسؤال تحقق."], ["البرمجة", "مراجع كود", "راجع الكود كمطور خبير: الأخطاء، الأمان، الأداء، القابلية للصيانة، الحالات الطرفية، ثم اقترح نسخة محسنة."], ["البحث", "باحث موثق", "حلّل [الموضوع]، وافصل الحقائق عن الآراء والافتراضات، وحدد ما يحتاج إلى تحقق أو مصدر."], ["الأعمال", "محلل قرار", "حلّل [القرار] وفق التكلفة والوقت والمخاطر والأثر وسهولة التنفيذ، واذكر الافتراضات بوضوح."], ["التصميم", "مصمم UI/UX", "أنشئ brief لتصميم [المنتج] يتضمن الجمهور، رحلة المستخدم، الهيكل، المكونات، الحالات والوصولية."], ["الصور", "مولد وصف بصري", "اكتب برومبت صورة لـ [الموضوع] يحدد التكوين، العدسة، الإضاءة، الألوان، الخامات، البيئة والمزاج."], ["السوشيال", "منشور قوي", "اكتب منشورًا عن [الفكرة]: خطاف، قيمة واضحة، مثال قصير، ثم دعوة للفعل."], ["الدراسة", "خطة مذاكرة", "أنشئ خطة مذاكرة لـ [المادة] خلال [المدة] تشمل التقسيم والمراجعة المتباعدة والاختبارات والاستدراك."], ["المشاريع", "مدير مشروع", "ضع خطة لـ [المشروع] من البداية للإطلاق: النطاق، المراحل، الاعتماديات، المخاطر ومؤشرات النجاح."], ["المبيعات", "عرض تجاري", "اكتب عرضًا تجاريًا لـ [العميل] حول [الخدمة]: المشكلة، القيمة، الدليل والخطوة التالية دون مبالغة."]],S=[["ELI5", "Explain Like I'm 5", "شرح شديد التبسيط"], ["TL;DR", "Too Long; Didn't Read", "تلخيص سريع"], ["AIDA", "Attention, Interest, Desire, Action", "كتابة تسويقية"], ["PAS", "Problem, Agitate, Solution", "إقناع وتسويق"], ["CTA", "Call To Action", "دعوة للفعل"], ["USP", "Unique Selling Proposition", "الميزة التنافسية"], ["SWOT", "Strengths, Weaknesses, Opportunities, Threats", "تحليل استراتيجي"], ["SMART", "Specific, Measurable, Achievable, Relevant, Time-bound", "صياغة أهداف"], ["KPI", "Key Performance Indicator", "مؤشر أداء"], ["OKR", "Objectives & Key Results", "أهداف ونتائج"], ["MVP", "Minimum Viable Product", "أقل منتج قابل للإطلاق"], ["PRD", "Product Requirements Document", "متطلبات المنتج"], ["RICE", "Reach, Impact, Confidence, Effort", "ترتيب الأولويات"], ["MoSCoW", "Must, Should, Could, Won't", "تصنيف المتطلبات"], ["SEO", "Search Engine Optimization", "تحسين الظهور بالبحث"], ["CRO", "Conversion Rate Optimization", "تحسين التحويل"], ["UX", "User Experience", "تجربة المستخدم"], ["UI", "User Interface", "واجهة المستخدم"], ["API", "Application Programming Interface", "واجهة برمجة"], ["JSON", "JavaScript Object Notation", "إخراج منظم"], ["CSV", "Comma-Separated Values", "بيانات جدولية"], ["SQL", "Structured Query Language", "استعلام قواعد بيانات"], ["CRUD", "Create, Read, Update, Delete", "عمليات البيانات"], ["REST", "Representational State Transfer", "تصميم خدمات الويب"], ["DRY", "Don't Repeat Yourself", "تقليل التكرار"], ["KISS", "Keep It Simple", "تبسيط الحل"], ["SOLID", "Object design principles", "مبادئ تصميم البرمجيات"], ["TDD", "Test-Driven Development", "التطوير بالاختبارات"], ["RCA", "Root Cause Analysis", "تحليل السبب الجذري"], ["5 Whys", "Five Whys", "الوصول للسبب الجذري"], ["STAR", "Situation, Task, Action, Result", "إجابات المقابلات"], ["RACI", "Responsible, Accountable, Consulted, Informed", "توزيع المسؤوليات"], ["SOP", "Standard Operating Procedure", "إجراء تشغيلي"], ["QA", "Quality Assurance", "ضمان الجودة"], ["UAT", "User Acceptance Testing", "اختبار قبول المستخدم"], ["ROI", "Return On Investment", "العائد على الاستثمار"], ["B2B", "Business to Business", "تسويق للشركات"], ["B2C", "Business to Consumer", "تسويق للأفراد"], ["CO-STAR", "Context, Objective, Style, Tone, Audience, Response", "إطار برومبت شامل"], ["RISEN", "Role, Instructions, Steps, End goal, Narrowing", "إطار للمهام المركبة"], ["CRISPE", "Capacity, Role, Insight, Statement, Personality, Experiment", "إطار متقدم"], ["RTF", "Role, Task, Format", "إطار سريع"], ["Few-shot", "Few examples", "توجيه النموذج بأمثلة"], ["Zero-shot", "No examples", "طلب مباشر دون أمثلة"], ["Persona", "Role/persona", "تحديد الدور"], ["Tone", "Writing tone", "تحديد النبرة"], ["Audience", "Target audience", "تحديد الجمهور"], ["Format", "Output format", "تحديد صيغة الناتج"], ["Edge cases", "Edge cases", "الحالات الطرفية"], ["Checklist", "Checklist", "قائمة تحقق"]],L=[["01", "أساسيات البرومبت", "ما البرومبت؟ وكيف يفسّر النموذج التعليمات؟"], ["02", "الهدف الواضح", "حوّل الفكرة العامة إلى نتيجة محددة."], ["03", "السياق", "أضف المعلومات التي تغيّر جودة الإجابة."], ["04", "الدور والجمهور", "حدّد من يجيب ولمن يكتب."], ["05", "القيود", "الطول، اللغة، النبرة وما يجب تجنبه."], ["06", "صيغة المخرجات", "جدول، خطوات، JSON، تقرير أو قائمة."], ["07", "الأمثلة Few-shot", "ثبّت النمط المطلوب بأمثلة قصيرة."], ["08", "التقسيم المرحلي", "قسّم المهمة الكبيرة إلى مراحل."], ["09", "البحث والتحقق", "اطلب التحقق والتمييز بين الحقيقة والافتراض."], ["10", "برومبتات البرمجة", "السياق التقني والاختبارات والحالات الطرفية."], ["11", "التقييم", "استخدم Rubric وChecklist لفحص النتيجة."], ["12", "الاحتراف", "حوّل القوالب إلى سير عمل قابل لإعادة الاستخدام."]],$=x=>document.getElementById(x);function go(x){$(x).scrollIntoView({behavior:"smooth"})}function toast(m){let t=$("toast");t.textContent=m;t.classList.add("on");setTimeout(()=>t.classList.remove("on"),1400)}
-const cats=[...new Set(T.map(x=>x[0]))];$("cat").innerHTML=cats.map(x=>`<option>${x}</option>`).join("");$("filter").innerHTML=["الكل",...cats].map(x=>`<option>${x}</option>`).join("");
-$("chips").innerHTML=T.slice(0,8).map((x,i)=>`<button class="chip" onclick="useT(${i})">${x[1]}</button>`).join("");
-function useT(i){$("cat").value=T[i][0];$("task").value=T[i][2];go("generator")}
-function generate(){let task=$("task").value.trim();if(!task)return toast("اكتب المهمة أولًا");let a=[];a.push("الدور:\n"+($("role").value.trim()?`تصرّف بصفتك ${$("role").value.trim()}.`:`تصرّف كخبير في مجال ${$("cat").value}.`));a.push("المهمة:\n"+task);if($("context").value.trim())a.push("السياق:\n"+$("context").value.trim());if($("audience").value.trim())a.push("الجمهور:\n"+$("audience").value.trim());a.push("النبرة:\n"+$("tone").value+".");if($("constraints").value.trim())a.push("القيود:\n"+$("constraints").value.trim());a.push("مستوى التفصيل:\n"+$("depth").value+".");a.push("صيغة المخرجات:\n"+$("format").value+".");a.push("فحص الجودة قبل التسليم:\n- طابق الهدف والسياق.\n- لا تخترع معلومات.\n- اذكر الافتراضات الضرورية.\n- احذف الحشو والتكرار.\n- اجعل النتيجة قابلة للاستخدام مباشرة.");$("out").textContent=a.join("\n\n")}
-function clearGen(){["role","task","context","audience","constraints"].forEach(x=>$(x).value="");$("out").textContent="املأ التفاصيل ثم اضغط «إنشاء البرومبت»."}
-function optimize(){let r=$("raw").value.trim();if(!r)return toast("ألصق البرومبت أولًا");$("optout").textContent=`الدور:\nتصرّف كخبير مناسب للمهمة.\n\nالهدف الأصلي:\n${r}\n\nطريقة التنفيذ:\n- افهم النتيجة المطلوبة قبل الإجابة.\n- استخدم المعلومات المتاحة فقط.\n- الأسلوب: ${$("mode").value}.\n- اذكر أي افتراض ضروري بوضوح.\n- تجنب الحشو والادعاءات غير المدعومة.\n\nصيغة المخرجات:\n${$("oformat").value}.\n\nفحص الجودة:\nراجع الوضوح، الصلة بالهدف، الالتزام بالقيود وقابلية الاستخدام قبل التسليم.`}
-function copy(id){let v=$(id).textContent;navigator.clipboard?.writeText(v).then(()=>toast("تم النسخ ✓")).catch(()=>toast("تعذر النسخ"))}
-function renderCards(){let q=$("search").value.toLowerCase(),f=$("filter").value;let z=T.map((x,i)=>[x,i]).filter(([x])=>(f==="الكل"||x[0]===f)&&x.join(" ").toLowerCase().includes(q));$("cards").innerHTML=z.map(([x,i])=>`<article class="card"><span class="tag">${x[0]}</span><h3>${x[1]}</h3><p>قالب احترافي قابل للتخصيص.</p><div class="snippet">${x[2]}</div><div class="cardBtns"><button class="mini" onclick="navigator.clipboard.writeText(T[${i}][2]);toast('تم النسخ ✓')">نسخ</button><button class="mini" onclick="useT(${i})">استخدام</button></div></article>`).join("")}
-$("search").oninput=renderCards;$("filter").onchange=renderCards;renderCards();
-let done=new Set(JSON.parse(localStorage.getItem("barakaLessons")||"[]"));function renderLessons(){$("lessons").innerHTML=L.map((x,i)=>`<article class="lesson ${done.has(i)?"done":""}"><span class="tag">${x[0]}</span><h3>${x[1]}</h3><p>${x[2]}</p><button class="mini" onclick="toggleLesson(${i})">${done.has(i)?"مكتمل ✓":"تمييز كمكتمل"}</button></article>`).join("");$("progress").textContent=Math.round(done.size/L.length*100)+"% مكتمل"}function toggleLesson(i){done.has(i)?done.delete(i):done.add(i);localStorage.setItem("barakaLessons",JSON.stringify([...done]));renderLessons()}renderLessons();
-function renderS(q=""){q=q.toLowerCase();$("stable").innerHTML=S.filter(x=>x.join(" ").toLowerCase().includes(q)).map(x=>`<tr><td>${x[0]}</td><td>${x[1]}</td><td>${x[2]}</td></tr>`).join("")}$("ssearch").oninput=e=>renderS(e.target.value);renderS();
-function saved(){return JSON.parse(localStorage.getItem("barakaPrompts")||"[]")}function save(id,title){let text=$(id).textContent;if(!text||text.includes("اضغط"))return toast("لا يوجد محتوى للحفظ");let a=saved();a.unshift({id:Date.now(),title,text,date:new Date().toLocaleString("ar")});localStorage.setItem("barakaPrompts",JSON.stringify(a.slice(0,100)));renderSaved();toast("تم الحفظ ✓")}function renderSaved(){let a=saved();$("savedList").innerHTML=a.length?a.map(x=>`<div class="savedItem"><b>${x.title}</b><p>${x.text}</p><button class="mini" onclick="navigator.clipboard.writeText(${JSON.stringify("__TEXT__")}.replace('__TEXT__',''));copySaved(${x.id})">نسخ</button> <button class="mini" onclick="delSaved(${x.id})">حذف</button></div>`).join(""):`<div class="savedItem">لا توجد برومبتات محفوظة بعد.</div>`}function copySaved(id){let x=saved().find(v=>v.id===id);if(x){navigator.clipboard.writeText(x.text);toast("تم النسخ ✓")}}function delSaved(id){localStorage.setItem("barakaPrompts",JSON.stringify(saved().filter(x=>x.id!==id)));renderSaved()}function clearSaved(){if(confirm("حذف جميع المحفوظات؟")){localStorage.removeItem("barakaPrompts");renderSaved()}}renderSaved();
-</script></body></html>
+
+/* =========================
+   DATA
+========================= */
+
+const templates = [
+
+{
+category:"التسويق",
+title:"خطة تسويق احترافية",
+prompt:`تصرّف كخبير تسويق رقمي.
+أنشئ خطة تسويقية متكاملة لـ [المشروع].
+
+حدد:
+- الجمهور المستهدف.
+- المشكلة التي يحلها المنتج.
+- عرض القيمة.
+- القنوات التسويقية المناسبة.
+- خطة المحتوى.
+- أفكار الحملات.
+- مؤشرات الأداء KPI.
+- دعوة واضحة للفعل CTA.
+
+اجعل الخطة عملية وقابلة للتنفيذ.`
+},
+
+{
+category:"الكتابة",
+title:"كاتب محتوى احترافي",
+prompt:`تصرّف ككاتب محتوى محترف.
+
+اكتب محتوى حول [الموضوع] موجهًا إلى [الجمهور].
+
+المطلوب:
+- عنوان قوي.
+- مقدمة جذابة.
+- محتوى واضح ومنظم.
+- أمثلة عند الحاجة.
+- خاتمة مؤثرة.
+- دعوة مناسبة للفعل.
+
+تجنب الحشو والتكرار.`
+},
+
+{
+category:"التعليم",
+title:"مدرس شخصي",
+prompt:`تصرّف كمدرس متخصص في [الموضوع].
+
+اشرح الموضوع لطالب مستواه [المستوى].
+
+ابدأ بالمفاهيم الأساسية ثم انتقل تدريجيًا للأفكار المتقدمة.
+
+استخدم:
+- لغة واضحة.
+- أمثلة عملية.
+- تشبيهات مبسطة.
+- تمرينًا قصيرًا.
+- أسئلة للتأكد من الفهم.`
+},
+
+{
+category:"البرمجة",
+title:"مراجع كود",
+prompt:`تصرّف كمطور برمجيات خبير.
+
+راجع الكود الذي سأرسله.
+
+افحص:
+- الأخطاء.
+- الأمان.
+- الأداء.
+- قابلية القراءة.
+- قابلية الصيانة.
+- الحالات الطرفية.
+- التوافق مع الهاتف.
+
+ثم اقترح نسخة محسنة واشرح أهم التغييرات.`
+},
+
+{
+category:"البحث",
+title:"باحث ومحلل",
+prompt:`تصرّف كباحث محترف.
+
+حلّل الموضوع التالي:
+[الموضوع]
+
+افصل بوضوح بين:
+- الحقائق.
+- الاستنتاجات.
+- الآراء.
+- الافتراضات.
+
+حدد المعلومات التي تحتاج إلى مصدر أو تحقق إضافي.
+
+قدّم النتيجة بطريقة منظمة ومحايدة.`
+},
+
+{
+category:"الأعمال",
+title:"محلل قرار",
+prompt:`تصرّف كمستشار أعمال.
+
+حلّل القرار التالي:
+[القرار]
+
+قيّم:
+- التكلفة.
+- الوقت.
+- الموارد.
+- المخاطر.
+- الفوائد.
+- الأثر المتوقع.
+- سهولة التنفيذ.
+
+اذكر الافتراضات بوضوح ثم قدّم السيناريوهات الممكنة.`
+},
+
+{
+category:"التصميم",
+title:"مصمم UI/UX",
+prompt:`تصرّف كمصمم UI/UX محترف.
+
+أنشئ تصورًا لتصميم [المنتج].
+
+حدد:
+- المستخدم المستهدف.
+- الهدف الرئيسي.
+- رحلة المستخدم.
+- هيكل الصفحات.
+- المكونات.
+- حالات الاستخدام.
+- حالات الخطأ.
+- تجربة الهاتف.
+- الوصولية.
+
+اجعل التصميم بسيطًا واحترافيًا.`
+},
+
+{
+category:"الصور",
+title:"برومبت احترافي لتوليد الصور",
+prompt:`أنشئ برومبت احترافيًا لتوليد صورة حول:
+[الموضوع]
+
+صف بدقة:
+- الموضوع الرئيسي.
+- البيئة.
+- التكوين.
+- زاوية التصوير.
+- العدسة.
+- الإضاءة.
+- الألوان.
+- الخامات.
+- المزاج.
+- مستوى الواقعية.
+- التفاصيل المهمة.
+
+تجنب العناصر غير المطلوبة.`
+},
+
+{
+category:"السوشيال",
+title:"منشور تواصل اجتماعي",
+prompt:`اكتب منشورًا قويًا حول:
+[الفكرة]
+
+البنية:
+1. خطاف يجذب الانتباه.
+2. الفكرة الأساسية.
+3. قيمة أو معلومة مفيدة.
+4. مثال قصير.
+5. خاتمة.
+6. دعوة للفعل.
+
+اجعل الأسلوب طبيعيًا وغير متكلف.`
+},
+
+{
+category:"الدراسة",
+title:"خطة مذاكرة",
+prompt:`أنشئ خطة مذاكرة لـ [المادة] خلال [المدة].
+
+قسّم الخطة إلى:
+- أهداف أسبوعية.
+- أهداف يومية.
+- مراجعة متباعدة.
+- اختبارات قصيرة.
+- وقت لمعالجة نقاط الضعف.
+- مراجعة نهائية.
+
+اجعل الخطة واقعية وقابلة للتعديل.`
+},
+
+{
+category:"المشاريع",
+title:"خطة مشروع",
+prompt:`تصرّف كمدير مشروع.
+
+أنشئ خطة تنفيذية لـ [المشروع].
+
+حدد:
+- الهدف.
+- نطاق العمل.
+- المتطلبات.
+- المراحل.
+- المهام.
+- الأولويات.
+- الاعتماديات.
+- المخاطر.
+- معايير النجاح.
+- خطة الإطلاق.`
+},
+
+{
+category:"المبيعات",
+title:"عرض تجاري",
+prompt:`تصرّف كخبير مبيعات B2B.
+
+اكتب عرضًا تجاريًا لـ [العميل] حول [الخدمة].
+
+اشرح:
+- المشكلة.
+- الحل.
+- القيمة.
+- الفوائد.
+- ما يميز العرض.
+- الخطوة التالية.
+
+اجعل النص مقنعًا دون مبالغة.`
+},
+
+{
+category:"يوتيوب",
+title:"فيديو يوتيوب",
+prompt:`تصرّف كخبير محتوى يوتيوب.
+
+أنشئ خطة فيديو حول [الموضوع].
+
+المطلوب:
+- 5 عناوين جذابة.
+- فكرة للصورة المصغرة.
+- Hook لأول 15 ثانية.
+- مخطط الفيديو.
+- نص مختصر للمقدمة.
+- وصف الفيديو.
+- كلمات مفتاحية.
+- CTA مناسب.`
+},
+
+{
+category:"الوظائف",
+title:"تحسين السيرة الذاتية",
+prompt:`تصرّف كخبير توظيف.
+
+راجع السيرة الذاتية وفق الوظيفة المستهدفة:
+[الوظيفة]
+
+حسّن:
+- الملخص المهني.
+- الخبرات.
+- الإنجازات.
+- الكلمات المفتاحية.
+- الوضوح.
+- قابلية القراءة.
+
+لا تخترع أي خبرة أو إنجاز غير موجود.`
+},
+
+{
+category:"ريادة الأعمال",
+title:"تحليل فكرة مشروع",
+prompt:`حلّل فكرة المشروع التالية:
+[الفكرة]
+
+غطِّ:
+- المشكلة.
+- العميل المستهدف.
+- الحل.
+- حجم الحاجة.
+- المنافسين.
+- الميزة التنافسية.
+- نموذج الإيرادات.
+- المخاطر.
+- MVP مقترح.
+- طريقة اختبار الفكرة بأقل تكلفة.`
+}
+
+];
+
+const shortcuts = [
+
+["ELI5","Explain Like I'm 5","شرح الفكرة بأبسط صورة ممكنة"],
+["TL;DR","Too Long; Didn't Read","تلخيص النص الطويل"],
+["AIDA","Attention, Interest, Desire, Action","إطار للكتابة التسويقية"],
+["PAS","Problem, Agitate, Solution","إطار للإقناع والتسويق"],
+["CTA","Call To Action","الدعوة لاتخاذ إجراء"],
+["USP","Unique Selling Proposition","الميزة التنافسية الفريدة"],
+["KPI","Key Performance Indicator","مؤشر قياس الأداء"],
+["OKR","Objectives and Key Results","الأهداف والنتائج الرئيسية"],
+["SMART","Specific, Measurable, Achievable, Relevant, Time-bound","صياغة أهداف قابلة للقياس"],
+["SWOT","Strengths, Weaknesses, Opportunities, Threats","التحليل الاستراتيجي"],
+["MVP","Minimum Viable Product","أقل نسخة قابلة للاختبار من المنتج"],
+["PRD","Product Requirements Document","وثيقة متطلبات المنتج"],
+["RICE","Reach, Impact, Confidence, Effort","ترتيب أولويات المنتج"],
+["MoSCoW","Must, Should, Could, Won't","تصنيف المتطلبات"],
+["SEO","Search Engine Optimization","تحسين الظهور في محركات البحث"],
+["CRO","Conversion Rate Optimization","تحسين معدل التحويل"],
+["UX","User Experience","تجربة المستخدم"],
+["UI","User Interface","واجهة المستخدم"],
+["API","Application Programming Interface","ربط الأنظمة والخدمات"],
+["JSON","JavaScript Object Notation","صيغة بيانات منظمة"],
+["CSV","Comma-Separated Values","بيانات جدولية"],
+["SQL","Structured Query Language","الاستعلام من قواعد البيانات"],
+["CRUD","Create Read Update Delete","العمليات الأساسية للبيانات"],
+["REST","Representational State Transfer","أسلوب لبناء خدمات الويب"],
+["DRY","Don't Repeat Yourself","تجنب تكرار الكود"],
+["KISS","Keep It Simple","الحفاظ على بساطة الحل"],
+["SOLID","Software Design Principles","مبادئ تصميم البرمجيات"],
+["TDD","Test-Driven Development","التطوير المعتمد على الاختبارات"],
+["QA","Quality Assurance","ضمان الجودة"],
+["UAT","User Acceptance Testing","اختبار قبول المستخدم"],
+["RCA","Root Cause Analysis","تحليل السبب الجذري"],
+["5 Whys","Five Whys","اكتشاف أصل المشكلة"],
+["STAR","Situation Task Action Result","تنظيم إجابات المقابلات"],
+["RACI","Responsible Accountable Consulted Informed","توزيع المسؤوليات"],
+["SOP","Standard Operating Procedure","إجراء تشغيلي موحد"],
+["ROI","Return On Investment","العائد على الاستثمار"],
+["B2B","Business to Business","أعمال موجهة للشركات"],
+["B2C","Business to Consumer","أعمال موجهة للمستهلك"],
+["RTF","Role Task Format","الدور + المهمة + صيغة الناتج"],
+["CO-STAR","Context Objective Style Tone Audience Response","إطار متكامل للبرومبت"],
+["RISEN","Role Instructions Steps End goal Narrowing","إطار للمهام المعقدة"],
+["CRISPE","Capacity Role Insight Statement Personality Experiment","إطار متقدم للبرومبت"],
+["Few-shot","Few examples","توجيه النموذج باستخدام أمثلة"],
+["Zero-shot","No examples","طلب المهمة دون تقديم أمثلة"],
+["Persona","Role / Persona","تحديد الشخصية أو الدور"],
+["Context","Context","إعطاء النموذج الخلفية الضرورية"],
+["Constraint","Constraint","تحديد القيود"],
+["Audience","Target Audience","تحديد الجمهور"],
+["Tone","Tone of Voice","تحديد نبرة الكتابة"],
+["Format","Output Format","تحديد شكل الإجابة"],
+["Edge Cases","Edge Cases","فحص الحالات غير المعتادة"],
+["Checklist","Checklist","قائمة لفحص اكتمال النتيجة"],
+["Rubric","Evaluation Rubric","معايير لتقييم جودة الإجابة"],
+["Markdown","Markdown","تنسيق النص المنظم"],
+["Prompt Chaining","Prompt Chaining","تقسيم المهمة إلى عدة برومبتات مترابطة"],
+["Iteration","Iteration","تحسين النتيجة على عدة جولات"],
+["Token","Token","وحدة معالجة النص لدى النموذج"],
+["LLM","Large Language Model","نموذج لغوي كبير"],
+["RAG","Retrieval-Augmented Generation","توليد مدعوم باسترجاع مصادر خارجية"],
+["NLP","Natural Language Processing","معالجة اللغة الطبيعية"],
+["AI","Artificial Intelligence","الذكاء الاصطناعي"]
+
+];
+
+const lessons = [
+
+["01","ما هو البرومبت؟","فهم معنى البرومبت وكيف يستجيب النموذج للتعليمات."],
+
+["02","تحديد الهدف","تعلّم تحويل الفكرة العامة إلى نتيجة محددة وواضحة."],
+
+["03","إضافة السياق","اعرف ما المعلومات التي يحتاجها النموذج قبل تنفيذ المهمة."],
+
+["04","تحديد الدور","استخدم الدور لتوجيه مستوى الخبرة وزاوية الإجابة."],
+
+["05","معرفة الجمهور","خصص اللغة والتفاصيل بحسب الشخص الذي سيقرأ النتيجة."],
+
+["06","القيود","حدد اللغة والطول والنبرة وما يجب فعله أو تجنبه."],
+
+["07","صيغة المخرجات","اطلب جدولًا أو خطوات أو JSON أو تقريرًا بدل ترك الشكل غامضًا."],
+
+["08","Few-shot","استخدم أمثلة قصيرة لتوضيح النمط المطلوب."],
+
+["09","تقسيم المهام","قسّم المهام الكبيرة إلى خطوات مترابطة."],
+
+["10","برومبتات البرمجة","تعلم كتابة برومبتات تحتوي السياق التقني والاختبارات والحالات الطرفية."],
+
+["11","البحث والتحقق","اطلب التمييز بين الحقائق والافتراضات والمعلومات غير المؤكدة."],
+
+["12","التقييم والتحسين","أنشئ Rubric وChecklist ثم حسّن البرومبت بصورة متكررة."]
+
+];
+
+
+/* =========================
+   HELPERS
+========================= */
+
+function byId(id){
+  return document.getElementById(id);
+}
+
+function goTo(id){
+  const el = byId(id);
+  if(el){
+    el.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+  }
+}
+
+function showToast(message){
+
+  const el = byId("toast");
+
+  el.textContent = message;
+
+  el.classList.add("show");
+
+  setTimeout(function(){
+    el.classList.remove("show");
+  },1600);
+
+}
+
+async function copyText(text){
+
+  try{
+
+    if(navigator.clipboard && window.isSecureContext){
+
+      await navigator.clipboard.writeText(text);
+
+    }else{
+
+      const area = document.createElement("textarea");
+
+      area.value = text;
+
+      area.style.position = "fixed";
+      area.style.opacity = "0";
+
+      document.body.appendChild(area);
+
+      area.select();
+
+      document.execCommand("copy");
+
+      area.remove();
+
+    }
+
+    showToast("تم النسخ ✓");
+
+  }catch(error){
+
+    showToast("تعذر النسخ");
+
+  }
+
+}
+
+function copyElement(id){
+
+  const element = byId(id);
+
+  if(!element){
+    return;
+  }
+
+  copyText(element.textContent);
+
+}
+
+
+/* =========================
+   GENERATOR
+========================= */
+
+function initializeCategories(){
+
+  const categories = [
+    ...new Set(
+      templates.map(function(item){
+        return item.category;
+      })
+    )
+  ];
+
+  byId("category").innerHTML =
+    categories
+    .map(function(category){
+      return `<option>${category}</option>`;
+    })
+    .join("");
+
+  byId("libraryFilter").innerHTML =
+    ["الكل"].concat(categories)
+    .map(function(category){
+      return `<option>${category}</option>`;
+    })
+    .join("");
+
+}
+
+function initializeQuickTemplates(){
+
+  const container = byId("quickTemplates");
+
+  container.innerHTML =
+    templates
+    .slice(0,10)
+    .map(function(item,index){
+
+      return `
+      <button
+      class="chip"
+      onclick="useTemplate(${index})"
+      >
+      ${item.title}
+      </button>
+      `;
+
+    })
+    .join("");
+
+}
+
+function useTemplate(index){
+
+  const item = templates[index];
+
+  if(!item){
+    return;
+  }
+
+  byId("category").value = item.category;
+
+  byId("task").value = item.prompt;
+
+  goTo("generator");
+
+  showToast("تم تحميل القالب");
+
+}
+
+function generatePrompt(){
+
+  const task =
+    byId("task").value.trim();
+
+  if(!task){
+
+    showToast("اكتب المهمة أولًا");
+
+    byId("task").focus();
+
+    return;
+
+  }
+
+  const role =
+    byId("role").value.trim();
+
+  const context =
+    byId("context").value.trim();
+
+  const audience =
+    byId("audience").value.trim();
+
+  const constraints =
+    byId("constraints").value.trim();
+
+  const category =
+    byId("category").value;
+
+  const tone =
+    byId("tone").value;
+
+  const format =
+    byId("format").value;
+
+  const depth =
+    byId("depth").value;
+
+  const sections = [];
+
+  sections.push(
+`الدور:
+${role ? "تصرّف بصفتك " + role + "." : "تصرّف كخبير متخصص في مجال " + category + "."}`
+  );
+
+  sections.push(
+`الهدف والمهمة:
+${task}`
+  );
+
+  if(context){
+
+    sections.push(
+`السياق:
+${context}`
+    );
+
+  }
+
+  if(audience){
+
+    sections.push(
+`الجمهور المستهدف:
+${audience}`
+    );
+
+  }
+
+  sections.push(
+`أسلوب الكتابة:
+استخدم نبرة ${tone}.`
+  );
+
+  sections.push(
+`مستوى التفصيل:
+${depth}.`
+  );
+
+  if(constraints){
+
+    sections.push(
+`القيود والمتطلبات:
+${constraints}`
+    );
+
+  }
+
+  sections.push(
+`صيغة المخرجات:
+قدّم الإجابة في شكل ${format}.`
+  );
+
+  sections.push(
+`معايير الجودة:
+- افهم الهدف قبل البدء.
+- التزم بالسياق والمتطلبات.
+- لا تخترع حقائق أو بيانات غير متاحة.
+- إذا اضطررت إلى افتراض شيء فاذكره بوضوح.
+- تجنب التكرار والحشو.
+- اجعل النتيجة عملية وقابلة للاستخدام.
+- راجع الإجابة قبل تسليمها.
+- تأكد من أن الناتج النهائي يحقق الهدف الأساسي للمهمة.`
+  );
+
+  byId("generatedPrompt").textContent =
+    sections.join("\n\n");
+
+  showToast("تم إنشاء البرومبت ✓");
+
+}
+
+function clearGenerator(){
+
+  [
+    "role",
+    "task",
+    "context",
+    "audience",
+    "constraints"
+  ].forEach(function(id){
+
+    byId(id).value = "";
+
+  });
+
+  byId("generatedPrompt").textContent =
+    "املأ تفاصيل المهمة ثم اضغط «إنشاء البرومبت».";
+
+}
+
+
+/* =========================
+   OPTIMIZER
+========================= */
+
+function optimizePrompt(){
+
+  const raw =
+    byId("rawPrompt").value.trim();
+
+  if(!raw){
+
+    showToast("ألصق البرومبت أولًا");
+
+    return;
+
+  }
+
+  const mode =
+    byId("optimizationMode").value;
+
+  const format =
+    byId("optimizationFormat").value;
+
+  const optimized =
+`الدور:
+تصرّف كخبير متخصص في تنفيذ المهمة التالية بأعلى درجة ممكنة من الوضوح والدقة.
+
+المهمة الأصلية:
+${raw}
+
+طريقة التنفيذ:
+1. افهم الهدف النهائي من الطلب قبل صياغة الإجابة.
+2. استخرج المتطلبات الأساسية والضمنية.
+3. نظّم الإجابة بصورة منطقية.
+4. استخدم أسلوبًا ${mode}.
+5. لا تضف معلومات مختلقة.
+6. إذا كانت هناك معلومات ناقصة تؤثر جوهريًا في النتيجة، وضّحها.
+7. اذكر الافتراضات المهمة بوضوح.
+8. تجنب الحشو والتكرار.
+9. اجعل الإجابة قابلة للتطبيق مباشرة.
+
+صيغة المخرجات:
+${format}.
+
+فحص الجودة قبل التسليم:
+- هل تمت الإجابة عن الهدف الأساسي؟
+- هل تم الالتزام بجميع القيود؟
+- هل النتيجة واضحة ومنظمة؟
+- هل توجد ادعاءات غير مؤكدة؟
+- هل يمكن تحسين الدقة أو الاختصار؟
+- هل المخرجات قابلة للاستخدام مباشرة؟
+
+قدّم النسخة النهائية فقط بعد إجراء هذا الفحص.`;
+
+  byId("optimizedPrompt").textContent =
+    optimized;
+
+  showToast("تم تحسين البرومبت ✓");
+
+}
+
+
+/* =========================
+   LIBRARY
+========================= */
+
+function renderLibrary(){
+
+  const search =
+    byId("librarySearch")
+    .value
+    .trim()
+    .toLowerCase();
+
+  const filter =
+    byId("libraryFilter").value;
+
+  const filtered =
+    templates
+    .map(function(item,index){
+
+      return {
+        item:item,
+        index:index
+      };
+
+    })
+    .filter(function(data){
+
+      const item = data.item;
+
+      const matchesCategory =
+        filter === "الكل" ||
+        item.category === filter;
+
+      const searchable =
+        (
+          item.category +
+          " " +
+          item.title +
+          " " +
+          item.prompt
+        ).toLowerCase();
+
+      const matchesSearch =
+        searchable.includes(search);
+
+      return matchesCategory && matchesSearch;
+
+    });
+
+  const container =
+    byId("promptLibrary");
+
+  if(!filtered.length){
+
+    container.innerHTML =
+      `<div class="card">لا توجد نتائج مطابقة.</div>`;
+
+    return;
+
+  }
+
+  container.innerHTML =
+    filtered
+    .map(function(data){
+
+      const item = data.item;
+      const index = data.index;
+
+      return `
+      <article class="card">
+
+        <span class="tag">
+        ${item.category}
+        </span>
+
+        <h3>
+        ${item.title}
+        </h3>
+
+        <p>
+        قالب احترافي قابل للتخصيص.
+        </p>
+
+        <div class="snippet">
+        ${escapeHTML(item.prompt)}
+        </div>
+
+        <div class="card-buttons">
+
+          <button
+          class="small-btn"
+          onclick="copyTemplate(${index})"
+          >
+          نسخ
+          </button>
+
+          <button
+          class="small-btn"
+          onclick="useTemplate(${index})"
+          >
+          استخدام
+          </button>
+
+          <button
+          class="small-btn"
+          onclick="saveTemplate(${index})"
+          >
+          حفظ
+          </button>
+
+        </div>
+
+      </article>
+      `;
+
+    })
+    .join("");
+
+}
+
+function copyTemplate(index){
+
+  const item = templates[index];
+
+  if(item){
+    copyText(item.prompt);
+  }
+
+}
+
+function saveTemplate(index){
+
+  const item = templates[index];
+
+  if(!item){
+    return;
+  }
+
+  savePrompt(
+    item.title,
+    item.prompt
+  );
+
+}
+
+
+/* =========================
+   LEARNING
+========================= */
+
+function getCompletedLessons(){
+
+  try{
+
+    return new Set(
+      JSON.parse(
+        localStorage.getItem("albarakaLessons") || "[]"
+      )
+    );
+
+  }catch(error){
+
+    return new Set();
+
+  }
+
+}
+
+let completedLessons =
+  getCompletedLessons();
+
+function renderLessons(){
+
+  const container =
+    byId("lessonList");
+
+  container.innerHTML =
+    lessons
+    .map(function(lesson,index){
+
+      const completed =
+        completedLessons.has(index);
+
+      return `
+      <article
+      class="lesson ${completed ? "completed" : ""}"
+      >
+
+        <span class="tag">
+        ${lesson[0]}
+        </span>
+
+        <h3>
+        ${lesson[1]}
+        </h3>
+
+        <p>
+        ${lesson[2]}
+        </p>
+
+        <button
+        class="small-btn"
+        onclick="toggleLesson(${index})"
+        >
+        ${completed ? "مكتمل ✓" : "تمييز كمكتمل"}
+        </button>
+
+      </article>
+      `;
+
+    })
+    .join("");
+
+  const percentage =
+    Math.round(
+      (
+        completedLessons.size /
+        lessons.length
+      ) * 100
+    );
+
+  byId("learningProgress").textContent =
+    percentage +
+    "% مكتمل — " +
+    completedLessons.size +
+    " من " +
+    lessons.length;
+
+}
+
+function toggleLesson(index){
+
+  if(completedLessons.has(index)){
+
+    completedLessons.delete(index);
+
+  }else{
+
+    completedLessons.add(index);
+
+  }
+
+  localStorage.setItem(
+    "albarakaLessons",
+    JSON.stringify(
+      Array.from(completedLessons)
+    )
+  );
+
+  renderLessons();
+
+}
+
+
+/* =========================
+   SHORTCUTS
+========================= */
+
+function renderShortcuts(){
+
+  const query =
+    byId("shortcutSearch")
+    .value
+    .trim()
+    .toLowerCase();
+
+  const filtered =
+    shortcuts.filter(function(item){
+
+      return item
+      .join(" ")
+      .toLowerCase()
+      .includes(query);
+
+    });
+
+  byId("shortcutTable").innerHTML =
+    filtered
+    .map(function(item){
+
+      return `
+      <tr>
+        <td>${item[0]}</td>
+        <td>${item[1]}</td>
+        <td>${item[2]}</td>
+      </tr>
+      `;
+
+    })
+    .join("");
+
+}
+
+
+/* =========================
+   SAVED PROMPTS
+========================= */
+
+function getSavedPrompts(){
+
+  try{
+
+    return JSON.parse(
+      localStorage.getItem("albarakaPrompts") || "[]"
+    );
+
+  }catch(error){
+
+    return [];
+
+  }
+
+}
+
+function savePrompt(title,text){
+
+  if(!text || !text.trim()){
+    return;
+  }
+
+  const prompts =
+    getSavedPrompts();
+
+  prompts.unshift({
+
+    id:Date.now(),
+
+    title:title,
+
+    text:text,
+
+    date:new Date().toLocaleString("ar")
+
+  });
+
+  localStorage.setItem(
+    "albarakaPrompts",
+    JSON.stringify(
+      prompts.slice(0,100)
+    )
+  );
+
+  renderSavedPrompts();
+
+  showToast("تم الحفظ ✓");
+
+}
+
+function saveElement(id,title){
+
+  const element =
+    byId(id);
+
+  if(!element){
+    return;
+  }
+
+  const text =
+    element.textContent.trim();
+
+  if(
+    !text ||
+    text.includes("اضغط")
+  ){
+
+    showToast("لا يوجد برومبت للحفظ");
+
+    return;
+
+  }
+
+  savePrompt(
+    title,
+    text
+  );
+
+}
+
+function renderSavedPrompts(){
+
+  const prompts =
+    getSavedPrompts();
+
+  const container =
+    byId("savedList");
+
+  if(!prompts.length){
+
+    container.innerHTML =
+      `
+      <div class="saved-item">
+      لا توجد برومبتات محفوظة بعد.
+      </div>
+      `;
+
+    return;
+
+  }
+
+  container.innerHTML =
+    prompts
+    .map(function(item){
+
+      return `
+      <div class="saved-item">
+
+        <strong>
+        ${escapeHTML(item.title)}
+        </strong>
+
+        <div style="
+        color:#777;
+        font-size:8px;
+        margin-top:3px
+        ">
+        ${escapeHTML(item.date)}
+        </div>
+
+        <p>
+        ${escapeHTML(item.text)}
+        </p>
+
+        <button
+        class="small-btn"
+        onclick="copySavedPrompt(${item.id})"
+        >
+        نسخ
+        </button>
+
+        <button
+        class="small-btn"
+        onclick="deleteSavedPrompt(${item.id})"
+        >
+        حذف
+        </button>
+
+      </div>
+      `;
+
+    })
+    .join("");
+
+}
+
+function copySavedPrompt(id){
+
+  const prompt =
+    getSavedPrompts()
+    .find(function(item){
+
+      return item.id === id;
+
+    });
+
+  if(prompt){
+
+    copyText(prompt.text);
+
+  }
+
+}
+
+function deleteSavedPrompt(id){
+
+  const prompts =
+    getSavedPrompts()
+    .filter(function(item){
+
+      return item.id !== id;
+
+    });
+
+  localStorage.setItem(
+    "albarakaPrompts",
+    JSON.stringify(prompts)
+  );
+
+  renderSavedPrompts();
+
+  showToast("تم الحذف");
+
+}
+
+function clearAllSaved(){
+
+  const prompts =
+    getSavedPrompts();
+
+  if(!prompts.length){
+
+    showToast("لا توجد محفوظات");
+
+    return;
+
+  }
+
+  const confirmed =
+    confirm(
+      "هل تريد حذف جميع البرومبتات المحفوظة؟"
+    );
+
+  if(!confirmed){
+    return;
+  }
+
+  localStorage.removeItem(
+    "albarakaPrompts"
+  );
+
+  renderSavedPrompts();
+
+  showToast("تم حذف المحفوظات");
+
+}
+
+
+/* =========================
+   SECURITY / DISPLAY
+========================= */
+
+function escapeHTML(value){
+
+  return String(value)
+  .replace(/&/g,"&amp;")
+  .replace(/</g,"&lt;")
+  .replace(/>/g,"&gt;")
+  .replace(/"/g,"&quot;")
+  .replace(/'/g,"&#039;");
+
+}
+
+
+/* =========================
+   EVENTS
+========================= */
+
+byId("librarySearch")
+.addEventListener(
+  "input",
+  renderLibrary
+);
+
+byId("libraryFilter")
+.addEventListener(
+  "change",
+  renderLibrary
+);
+
+byId("shortcutSearch")
+.addEventListener(
+  "input",
+  renderShortcuts
+);
+
+
+/* =========================
+   START APPLICATION
+========================= */
+
+initializeCategories();
+
+initializeQuickTemplates();
+
+renderLibrary();
+
+renderLessons();
+
+renderShortcuts();
+
+renderSavedPrompts();
+
+</script>
+
+</body>
+</html>
